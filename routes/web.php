@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Cem\Classes\Classerooms;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+
+Route::middleware('auth')->get('/classes', Classerooms::class)->name('classes');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
