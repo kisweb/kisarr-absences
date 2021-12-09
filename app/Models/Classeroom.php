@@ -30,4 +30,13 @@ class Classeroom extends Model
     {
         return $this->niveau;
     }
+
+    public static function search($search)
+    {
+       return empty($search)
+       ? static::query()
+       : static::query()->where('id', 'like', '%' . $search . '%')
+                ->orWhere('refClasse', 'like', '%' . $search . '%')
+                ->orWhere('libClasse', 'like', '%' . $search . '%');
+    }
 }

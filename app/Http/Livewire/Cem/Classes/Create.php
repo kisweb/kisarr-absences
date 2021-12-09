@@ -10,12 +10,19 @@ class Create extends Component
     public $refClasse;
     public $libClasse;
     public $niveau;
+    public $openModal = false;
 
     protected $rules = [
         'refClasse' => ['required', 'integer', 'unique:classerooms,refClasse'],
         'libClasse' => ['required', 'string','unique:classerooms,libClasse'],
         'niveau' => ['required'],
     ];
+
+    public function openModalToCreateClasse()
+    {
+        $this->resetErrorBag();
+        $this->openModal = true;
+    }
 
     public function updated($property)
     {
@@ -30,7 +37,14 @@ class Create extends Component
             'niveau'    =>  $this->niveau,
         ]);
 
-        session()->flash('success', 'Classe créée avec succès !');
+        $this->dispatchBrowserEvent('ClasseCreated', [
+            'title'     =>  config('app.name'),
+            'icon'      =>  'success',
+            'iconColor' =>  'green',
+            'text'      =>  'La classe libellée '. $this->libClasse. ' a été créée avec succès',
+        ]);
+
+        //session()->flash('success', 'Classe créée avec succès !');
 
         $this->reset();
     }
