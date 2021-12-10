@@ -62,7 +62,7 @@
             text: e.detail.text,
             icon: e.detail.icon,
             iconColor: e.detail.iconColor,
-            width: 600,
+            width: 300,
             padding: '3em',
             color: '#716add',
             timer: 5000,
