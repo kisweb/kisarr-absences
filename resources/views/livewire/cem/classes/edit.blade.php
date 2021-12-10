@@ -1,9 +1,9 @@
-<div class="container p-4">
+<div class="container p-1">
     @php
         $disabled = $errors->any()  ? true : false;
     @endphp
 
-    <div class="flex w-10/12 gap-4">
+    <div class="flex gap-2">
         <x-jet-button class="bg-yellow-600 hover:bg-yellow-300" wire:click='openModalToUpdateClasse' wire:loading.attr='disabled'>
            Editer
         </x-jet-button>

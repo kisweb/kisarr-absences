@@ -14,7 +14,7 @@
         <x-partials.footer />
 
 
-        @bukScripts
+
         <livewire:scripts />
         @stack('scripts')
     </body>

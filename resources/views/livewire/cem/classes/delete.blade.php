@@ -1,8 +1,8 @@
-<div class="p-2">
+<div class="p-1">
 
-    <div class="flex gap-4">
-        <x-jet-button class="bg-red-500 hover:bg-red-400" wire:click="openModalToDeleteClasse">
-           <x-far-trash-alt class="w-4 h-4" />
+    <div class="flex gap-2">
+        <x-jet-button class="bg-red-700 hover:bg-red-400" wire:click="openModalToDeleteClasse">
+           Supprimer
         </x-jet-button>
     </div>
 

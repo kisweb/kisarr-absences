@@ -3,14 +3,10 @@
         $disabled = $errors->any() || is_null($this->refClasse) || is_null($this->libClasse) || is_null($this->niveau) ? true : false;
     @endphp
 
-    <div class="flex w-10/12 gap-4">
-        <x-jet-button class="bg-green-600 hover:bg-green-300" wire:click='openModalToCreateClasse' wire:loading.attr='disabled'>
+    <div class="flex">
+        <x-jet-button class="w-1/3 bg-green-600 hover:bg-green-300" wire:click='openModalToCreateClasse' wire:loading.attr='disabled'>
             {{ __('Create Classe') }}
         </x-jet-button>
-        <div class="w-10/12">
-            {{-- Alerts --}}
-            <x-alerts.message />
-        </div>
     </div>
 
     {{-- Modal --}}

@@ -57,17 +57,17 @@
                     </thead>
                     <tbody class="bg-white">
                         @forelse ($classerooms as $classe)
-                        <tr class="text-gray-700">
-                        <td class="px-4 py-3 font-semibold border text-ms">{{ $classe->id() }}</td>
-                        <td class="px-4 py-3 font-semibold border text-ms">{{ $classe->refClasse() }}</td>
-                        <td class="px-4 py-3 text-xs border">
-                            <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-sm">{{ $classe->libClasse }}</span>
-                        </td>
-                        <td class="px-4 py-3 text-sm border">{{ $classe->niveau() }}</td>
-                        <td class="flex px-4 py-3 space-x-6 text-sm border">
-                            <livewire:cem.classes.edit :classe=$classe :wire:key="'edit-classe'. now() . $classe->id()" />
-                            <livewire:cem.classes.delete :classe=$classe :wire:key="'delete-classe'.$classe->id()" />
-                        </td>
+                            <tr class="text-gray-700">
+                            <td class="px-4 py-3 font-semibold border text-ms">{{ $classe->id() }}</td>
+                            <td class="px-4 py-3 font-semibold border text-ms">{{ $classe->refClasse() }}</td>
+                            <td class="px-4 py-3 text-xs border">
+                                <span class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-sm">{{ $classe->libClasse }}</span>
+                            </td>
+                            <td class="px-4 py-3 text-sm border">{{ $classe->niveau() }}</td>
+                            <td class="flex px-4 py-3 space-x-1 text-sm border">
+                                <livewire:cem.classes.edit :classe=$classe :wire:key="'edit-classe'. now() . $classe->id()" />
+                                <livewire:cem.classes.delete :classe=$classe :wire:key="'delete-classe'.$classe->id()" />
+                            </td>
                         </tr>
                         @empty
                             <div>Pas de classes</div>
