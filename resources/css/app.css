@@ -7,3 +7,8 @@
         @apply bg-blue-400 !important;
     }
 }
+
+@import '~@fontawesome/fontawesome-free/css/fontawesome';
+@import '~@fontawesome/fontawesome-free/css/regular';
+@import '~@fontawesome/fontawesome-free/css/solid';
+@import '~@fontawesome/fontawesome-free/css/brands';

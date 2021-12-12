@@ -4,7 +4,7 @@
     @endphp
 
     <div class="flex">
-        <x-jet-button class="w-1/3 bg-green-600 hover:bg-green-300" wire:click='openModalToCreateClasse' wire:loading.attr='disabled'>
+        <x-jet-button class="w-1/6 bg-green-600 hover:bg-green-300 text-center" wire:click='openModalToCreateClasse' wire:loading.attr='disabled'>
             {{ __('Create Classe') }}
         </x-jet-button>
     </div>
@@ -62,8 +62,8 @@
             text: e.detail.text,
             icon: e.detail.icon,
             iconColor: e.detail.iconColor,
-            width: 300,
-            padding: '3em',
+            width: 500,
+            padding: '1em',
             color: '#716add',
             timer: 5000,
             toast: false,

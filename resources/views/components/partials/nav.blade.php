@@ -11,6 +11,9 @@
                 <li>
                     <a href="{{ route('classes') }}">Classes</a>
                 </li>
+                <li>
+                    <a href="{{ route('students') }}">Elèves</a>
+                </li>
             </ul>
         </div>
         <div>
