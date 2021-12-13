@@ -20,7 +20,7 @@ class StudentsImport implements
 
     public function collection(Collection $rows)
     {
-        ($rows);
+       // dd($rows);
         foreach ($rows as $row) {
 
             $student = Student::create([
@@ -31,7 +31,6 @@ class StudentsImport implements
                 'lieuNaissance' => $row['lieu_naissance'],
                 'sexe'          => $row['sexe'],
                 'matricule'     => $row['matricule'],
-                'cd'            => $row['cd'],
                 'classeroom_id' => $row['classeroom_id'],
                 'provenance'    => $row['provenance'],
                 'pere'          => $row['pere'],

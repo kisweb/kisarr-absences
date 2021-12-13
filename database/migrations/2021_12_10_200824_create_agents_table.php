@@ -15,7 +15,12 @@ class CreateAgentsTable extends Migration
     {
         Schema::create('agents', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('prenoms');
+            $table->string('nom');
+            $table->string('telephone')->default('78 267 50 80');
+            $table->string('matricule')->nullable();
+            $table->string('fonction')->nullable();
+            $table->string('discipline')->nullable();
             $table->timestamps();
         });
     }

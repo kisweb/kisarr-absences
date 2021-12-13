@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClasseroomsTable extends Migration
+class CreateAbsencesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateClasseroomsTable extends Migration
      */
     public function up()
     {
-        Schema::create('classerooms', function (Blueprint $table) {
+        Schema::create('absences', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('refClasse');
-            $table->string('libClasse');
-            $table->string('niveau');
             $table->timestamps();
         });
     }
@@ -29,6 +26,6 @@ class CreateClasseroomsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('classerooms');
+        Schema::dropIfExists('absences');
     }
 }

@@ -32,13 +32,22 @@ class Student extends Model
         'dateNaissance' => 'date:d-m-Y',
     ];
 
-    public function classe()
+    public function classeroom()
     {
-    	return $this->belongsTo(Classeroom::class, 'classeroom_id', 'refClasse');
+    	return $this->belongsTo(Classeroom::class);
     }
 
     public function scopeNomComplet()
     {
         return $this->prenoms .' '. $this->nom;
+    }
+
+    public static function search($search)
+    {
+       return empty($search)
+       ? static::query()
+       : static::query()->where('matricule', 'like', '%' . $search . '%')
+                ->orWhere('prenoms', 'like', '%' . $search . '%')
+                ->orWhere('nom', 'like', '%' . $search . '%');
     }
 }

@@ -15,8 +15,11 @@
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('classes') }}" :active="request()->routeIs('classes')">
+                    <x-jet-nav-link href="{{ route('classes.index') }}" :active="request()->routeIs('classes.index')">
                         {{ __('Classes') }}
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('students.index') }}" :active="request()->routeIs('students.index')">
+                        {{ __('Elèves') }}
                     </x-jet-nav-link>
                 </div>
             </div>
@@ -144,10 +147,10 @@
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('classes') }}" :active="request()->routeIs('classes')">
+            <x-jet-responsive-nav-link href="{{ route('classes.index') }}" :active="request()->routeIs('classes.index')">
                 {{ __('Classes') }}
             </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('students') }}" :active="request()->routeIs('students')">
+            <x-jet-responsive-nav-link href="{{ route('students.index') }}" :active="request()->routeIs('students.index')">
                 {{ __('Students') }}
             </x-jet-responsive-nav-link>
         </div>

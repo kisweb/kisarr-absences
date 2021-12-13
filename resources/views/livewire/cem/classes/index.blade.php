@@ -10,6 +10,7 @@
     {{-- Create classe --}}
     <livewire:cem.classes.create />
     <br>
+
     <section class="container p-6 mx-auto font-mono">
         <div class="flex items-center justify-between mb-2 space-x-2 bg-pink-300 p-2 rounded-md border-2">
             <div class="w-6/12">
