@@ -2,9 +2,10 @@
 
 namespace App\Http\Livewire\Cem\Classes;
 
-use App\Models\Classeroom;
 use Livewire\Component;
+use App\Models\Classeroom;
 use Livewire\WithPagination;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class Index extends Component
 {
@@ -19,6 +20,8 @@ class Index extends Component
 
     public function render()
     {
+        Alert::info('InfoAlert','Lorem ipsum dolor sit amet.');
+
         return view('livewire.cem.classes.index', [
             'classerooms' => Classeroom::search($this->search)->orderBy($this->orderBy, $this->orderAsc ? 'asc' : 'desc')
                                         ->paginate($this->perPage)

@@ -1,0 +1,11 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+
+@layer base {
+    .Swal2-toast.Swal2-icon-success {
+        @apply bg-blue-400 ;
+    }
+}

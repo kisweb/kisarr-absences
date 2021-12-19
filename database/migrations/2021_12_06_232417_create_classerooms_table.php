@@ -15,7 +15,7 @@ class CreateClasseroomsTable extends Migration
     {
         Schema::create('classerooms', function (Blueprint $table) {
             $table->id();
-            $table->integer('refClasse');
+            $table->unsignedBigInteger('refClasse');
             $table->string('libClasse');
             $table->string('niveau');
             $table->timestamps();

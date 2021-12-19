@@ -9,7 +9,13 @@
                     <a href="{{ route('home') }}">Accueil</a>
                 </li>
                 <li>
-                    <a href="{{ route('classes') }}">Classes</a>
+                    <a href="{{ route('classes.index') }}">Classes</a>
+                </li>
+                <li>
+                    <a href="{{ route('students.index') }}">Elèves</a>
+                </li>
+                <li>
+                    <a href="{{ route('dashboard') }}">Tableau de Bord</a>
                 </li>
             </ul>
         </div>

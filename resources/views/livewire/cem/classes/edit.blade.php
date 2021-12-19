@@ -3,9 +3,9 @@
         $disabled = $errors->any()  ? true : false;
     @endphp
 
-    <div class="flex gap-2">
+    <div class="flex">
         <x-jet-button class="bg-yellow-600 hover:bg-yellow-300" wire:click='openModalToUpdateClasse' wire:loading.attr='disabled'>
-           Editer
+            <i class="fa fa-edit"></i>
         </x-jet-button>
     </div>
 

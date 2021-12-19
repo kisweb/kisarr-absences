@@ -44,6 +44,7 @@ class Create extends Component
             'text'      =>  'La classe libellée '. $this->libClasse. ' a été créée avec succès',
         ]);
 
+        $this->emitUp('saved');
         //session()->flash('success', 'Classe créée avec succès !');
 
         $this->reset();

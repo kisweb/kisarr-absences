@@ -31,6 +31,11 @@ class Classeroom extends Model
         return $this->niveau;
     }
 
+    public function students()
+    {
+        return $this->hasMany(Student::class);
+    }
+
     public static function search($search)
     {
        return empty($search)

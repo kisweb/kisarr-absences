@@ -1,9 +1,9 @@
 <div class="p-1">
 
-    <div class="flex gap-2">
-        <x-jet-button class="bg-red-700 hover:bg-red-400" wire:click="openModalToDeleteClasse">
-           Supprimer
-        </x-jet-button>
+    <div class="flex">
+        <x-jet-danger-button class="bg-red-900 hover:bg-red-700" wire:click="openModalToDeleteClasse">
+            <i class="fa fa-trash"></i>
+        </x-jet-danger-button>
     </div>
 
     <x-jet-dialog-modal wire:model="openModal">
